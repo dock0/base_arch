@@ -1,7 +1,7 @@
 dock0/arch
 =======
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dock0/base_arch/Build)](https://github.com/dock0/base_arch/actions))
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dock0/base_arch/build.yaml?branch=main)](https://github.com/dock0/base_arch/actions))
 [![License](https://img.shields.io/github/license/dock0/base_arch)](https://github.com/dock0/base_arch/blob/master/LICENSE)
 
 A minimal Arch container. Built from scratch using a filesystem tarball [from dock0/tarball_arch](https://github.com/dock0/tarball_arch). Updates are routinely applied to this image in [dock0/arch](https://github.com/dock0/arch)
