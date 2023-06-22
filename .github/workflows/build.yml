@@ -32,7 +32,7 @@ jobs:
     - name: Publish images
       run: ./meta/publish.sh
       if: github.event_name == 'push' || steps.update.outputs.updated == 'yes'
-    - name: Post to hook-exporter
+    - name: Post to hook-exporter || ./meta/publish.sh
       run: ./.github/exporter.sh
       env:
         EXPORTER_TOKEN: ${{ secrets.EXPORTER_TOKEN }}
