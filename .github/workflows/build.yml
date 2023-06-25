@@ -24,15 +24,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Build container
-      run: docker build -t new .
+      run: docker build -t new . || docker build -t new .
       if: github.event_name != 'schedule' || steps.update.outputs.updated == 'yes'
-    - name: Test container || docker build -t new .
+    - name: Test container
       run: ./scripts/test.sh
       if: github.event_name != 'schedule' || steps.update.outputs.updated == 'yes'
     - name: Publish images
-      run: ./meta/publish.sh
+      run: ./meta/publish.sh || ./meta/publish.sh
       if: github.event_name == 'push' || steps.update.outputs.updated == 'yes'
-    - name: Post to hook-exporter || ./meta/publish.sh
+    - name: Post to hook-exporter
       run: ./.github/exporter.sh
       env:
         EXPORTER_TOKEN: ${{ secrets.EXPORTER_TOKEN }}
