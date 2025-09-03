@@ -1,6 +1,6 @@
 FROM scratch
 MAINTAINER akerl <me@lesaker.org>
-ENV DUCKTAPE_VERSION v0.6.1
+ENV DUCKTAPE_VERSION v0.6.0
 ADD shim/shim /tmp/ducktape/shim
 ADD cert /tmp/ducktape/cert
 ADD https://github.com/dock0/ducktape/releases/download/$DUCKTAPE_VERSION/ducktape_linux_amd64 /tmp/ducktape/ducktape
